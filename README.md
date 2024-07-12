@@ -1,8 +1,8 @@
-# Introdution
+# Introduction
 
-This directory contains a set of shell scripts for quickly getting a server up with Azure Arc, K3s, Azure IoT Operations (AIO) and Edge Storage Accelerator (ESA). Files are broken down by component to allow substituion (e.g. K8s instead of K3s) or installation at different times.
+This directory contains a set of shell scripts for quickly getting a server up with Azure Arc, K3s, Azure IoT Operations (AIO) and Edge Storage Accelerator (ESA). Files are broken down by component to allow substitution (e.g. K8s instead of K3s) or installation at different times.
 
-# Prerequisites
+## Prerequisites
 
 These scripts were built and tested on Ubuntu 22.04. The only other tool required for all install scripts, with the exception of k3s_setup.sh, is the Azure CLI:
 
@@ -23,9 +23,9 @@ NOTE: If you are using SSH to interact with the server that is being configured,
 az login -t <tenantId> --use-device-code
 ```
 
-# Execution
+## Execution
 
-Starting from a base install of Ubuntu 22.04 with the AZ CLI, the following steps should be followed. Note that all shell scripts are designed to be run without modification, based on variables defined in config.env, but are intended to be modified based on situational requirments.
+Starting from a base install of Ubuntu 22.04 with the AZ CLI, the following steps should be followed. Note that all shell scripts are designed to be run without modification, based on variables defined in config.env, but are intended to be modified based on situational requirements.
 
 Each script, with the exception of K3s which needs no variables, are run by passing in the config.env file:
 
